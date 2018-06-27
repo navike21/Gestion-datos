@@ -1,0 +1,117 @@
+@import _variables
+
+body,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="submit"],
+select,
+textarea
+    font-family: $fuente_textos
+    font-size: 1.4rem
+    letter-spacing: 1px
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    font-weight: 100
+    font-family: $fuente_titulo
+
+.loading
+    background-color: rgba($color_blanco, 5)
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    opacity: 0
+    z-index: -1
+
+    .mensaje_loading
+        background-color: $color_blanco
+        opacity: 0
+        position: relative
+        z-index: 2
+
+.loading::before
+    font-size: 1.6rem
+    color: $color_verde
+    content: "Please wait"
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    margin: auto
+    text-align: center
+    height: 15px
+    width: 100%
+    opacity: 1
+    animation-name: pulse
+    animation-duration: 2s
+    animation-iteration-count: infinite
+    z-index: -1
+
+.form
+    position: relative
+    background-color: $color_blanco
+
+//ANIMATE ICONS
+
+.checkmark__circle,
+.checkmark__circle_err,
+.checkmark__circle_warning
+    stroke-dasharray: 166
+    stroke-dashoffset: 166
+    stroke-width: 2
+    stroke-miterlimit: 10
+    stroke: $color_green
+    fill: none
+    animation: stroke 0.6s $curve forwards
+    animation-iteration-count: 1
+
+.checkmark__circle_err
+    stroke: $color_red
+
+.checkmark__circle_warning
+    stroke: $color_yelow
+
+.checkmark,
+.checkmark_err,
+.checkmark_warning
+    width: 56px
+    height: 56px
+    border-radius: 50%
+    display: block
+    stroke-width: 2
+    stroke: $color_blanco
+    stroke-miterlimit: 10
+    margin: 10% auto
+    box-shadow: inset 0px 0px 0px $color_green
+    animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both
+    animation-iteration-count: 1
+
+.checkmark_err
+    animation: fill_err 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both
+    box-shadow: inset 0px 0px 0px $color_red
+
+.checkmark_warning
+    animation: fill_war 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both
+    box-shadow: inset 0px 0px 0px $color_yelow
+    fill: $color_blanco
+
+.checkmark__check
+    transform-origin: 50% 50%
+    stroke-dasharray: 100
+    stroke-dashoffset: 100
+    animation: stroke 0.3s $curve 0.8s forwards
+    animation-iteration-count: 1
+
+
+
+// LOGIN

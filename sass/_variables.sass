@@ -1,0 +1,63 @@
+$fuente_titulo: 'Comfortaa', cursive
+$fuente_textos: 'Questrial', sans-serif
+
+$color_rojo:    #df1e1e
+$color_blanco:  #ffffff
+$color_verde:   #00afa9
+
+$color_green: #7ac142
+$color_red: #E51A1A
+$color_yelow: #FFD41F
+
+$curve: cubic-bezier(0.65, 0, 0.45, 1)
+
+@keyframes shake
+    from, to
+        transform: translate3d(0, 0, 0)
+
+    10%, 30%, 50%, 70%, 90%
+        transform: translate3d(-10px, 0, 0)
+
+    20%, 40%, 60%, 80%
+        transform: translate3d(10px, 0, 0)
+
+@keyframes pulse
+    from
+        transform: scale3d(1, 1, 1)
+
+    50%
+        transform: scale3d(1.05, 1.05, 1.05)
+
+    to
+        transform: scale3d(1, 1, 1)
+
+@keyframes stroke
+    100%
+        stroke-dashoffset: 0
+
+@keyframes scale
+    0%,
+    100%
+        transform: none
+
+    50%
+        transform: scale3d(1.1, 1.1, 1)
+
+@keyframes fill
+    100%
+        box-shadow: inset 0px 0px 0px 30px $color_green
+
+@keyframes fill_err
+    100%
+        box-shadow: inset 0px 0px 0px 30px $color_red
+
+@keyframes fill_war
+    100%
+        box-shadow: inset 0px 0px 0px 30px $color_yelow
+
+
+.requerido
+    animation-name: shake
+    animation-duration: 1s
+    animation-timing-function: ease-in-out
+    border: 1px solid $color_rojo!important

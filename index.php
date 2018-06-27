@@ -10,17 +10,21 @@
     <title>Data Management</title>
 
     <link rel="stylesheet" href="https://bastemp.com/css/bastemp.css?ver=1.0.2">
-    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css?ver=1.0.5">
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://bastemp.com/js/bastemp.min.js?ver=1.1.2"></script>
+    <script src="js/ready.min.js?ver=1.0.5" charset="utf-8"></script>
 </head>
-<body class="section_top_center">
+<body class="section_middle_center full_min_h">
     <?php
-        if(isset($_SESSION['name-user']))
+        // echo md5("1234567890");
+        if(isset($_SESSION['idusuario']))
             include_once("data/framework.php");
         else
             include_once("data/login.php");
     ?>
+    <input id="success_frm" type="hidden">
 </body>
 </html>
