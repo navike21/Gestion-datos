@@ -63,4 +63,58 @@ $(document).ready(function() {
             interval = setInterval(acciones, 1000);
         }
     });
+
+    var screenswrapp = $(".wrapp").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        dots: false,
+        arrows: false,
+        draggable: false,
+        touchMove: false,
+        fade: true
+    });
+
+    $("nav").on("click", "a", function(event){
+        event.preventDefault();
+        $("nav").find("a").removeClass("activeScreen");
+
+        var screen = parseInt($(this).data("screen"));
+        screenswrapp.slick("slickGoTo", screen);
+
+        $(this).addClass("activeScreen");
+    });
+
+
+    //Suscribers
+    var tableRecords1 = $("table.displayrecords1").DataTable({
+        scrollCollapse: true,
+        paging: true,
+        "order": [[0, "desc"]],
+        lengthMenu: [[7, 25, 50, -1], [7, 25, 50, "All"]],
+    });
+
+    //Hide Column comments
+    new $.fn.dataTable.Responsive(tableRecords1);
+
+    //Filter origin data
+    $(".origin").on("change", function() {
+        tableRecords1.column(-2).search(this.value).draw();
+    }); 
+
+    //Hair Professional
+    var tableRecords2 = $("table.displayrecords2").DataTable({
+        scrollCollapse: true,
+        paging: true,
+        "order": [[0, "desc"]],
+        lengthMenu: [[7, 25, 50, -1], [7, 25, 50, "All"]]
+    });
+
+    //Hide Column comments
+    new $.fn.dataTable.Responsive(tableRecords2);
+
+    //Filter origin data
+    $(".origin2").on("change", function() {
+        tableRecords2.column(-2).search(this.value).draw();
+    }); 
 });

@@ -11,11 +11,20 @@
 
     <link rel="stylesheet" href="https://bastemp.com/css/bastemp.css?ver=1.0.2">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Questrial" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.min.css?ver=1.0.5">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css"/>
+    
+    <link rel="stylesheet" href="plugins/slick-1.8.0/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick-1.8.0/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/styles.min.css?ver=1.1.0">
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://bastemp.com/js/bastemp.min.js?ver=1.1.2"></script>
-    <script src="js/ready.min.js?ver=1.0.5" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+
+    <script src="plugins/slick-1.8.0/slick/slick.min.js"></script>
+    <script src="js/ready.min.js?ver=1.0.7" charset="utf-8"></script>
 </head>
 <body class="section_middle_center full_min_h">
     <?php

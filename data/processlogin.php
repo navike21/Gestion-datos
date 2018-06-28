@@ -5,7 +5,7 @@
     $user  = $_POST["username"];
     $pass   = md5($_POST["password"]);
 
-    $consultaSql = "SELECT idusuario, nombres, usuario, password, estado FROM usuarios WHERE usuario = :usuario AND password = :password LIMIT 1";
+    $consultaSql = "SELECT idusuario, nombres, usuario, password, estado FROM owfnlkd_usuarios WHERE usuario = :usuario AND password = :password LIMIT 1";
 
     $sql_usuario = $PDO->prepare($consultaSql);
 	$sql_usuario->bindParam(':usuario', $user);
