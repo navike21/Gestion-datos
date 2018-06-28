@@ -117,4 +117,20 @@ $(document).ready(function() {
     $(".origin2").on("change", function() {
         tableRecords2.column(-2).search(this.value).draw();
     }); 
+
+    //Hair Professional
+    var tableRecords3 = $("table.displayrecords3").DataTable({
+        scrollCollapse: true,
+        paging: true,
+        "order": [[0, "desc"]],
+        lengthMenu: [[7, 25, 50, -1], [7, 25, 50, "All"]]
+    });
+
+    //Hide Column comments
+    new $.fn.dataTable.Responsive(tableRecords3);
+
+    //Filter origin data
+    $(".origin3").on("change", function() {
+        tableRecords3.column(-2).search(this.value).draw();
+    }); 
 });

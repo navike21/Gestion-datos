@@ -31,6 +31,8 @@
     <div class="screens section_top_center">
         <?php include_once($rutaScreen."/hair-professional.php"); ?>
     </div>
-    <div class="screens">Become a distributor</div>
-    <div class="screens">Contact</div>
+    <div class="screens section_top_center">
+        <?php include_once($rutaScreen."/become-distributor.php"); ?>
+    </div>
+    <div class="screens section_middle_center">Not available</div>
 </section>

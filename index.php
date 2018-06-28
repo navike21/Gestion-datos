@@ -16,7 +16,7 @@
     
     <link rel="stylesheet" href="plugins/slick-1.8.0/slick/slick.css">
     <link rel="stylesheet" href="plugins/slick-1.8.0/slick/slick-theme.css">
-    <link rel="stylesheet" href="css/styles.min.css?ver=1.1.0">
+    <link rel="stylesheet" href="css/styles.min.css?ver=1.1.2">
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://bastemp.com/js/bastemp.min.js?ver=1.1.2"></script>
@@ -24,11 +24,11 @@
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 
     <script src="plugins/slick-1.8.0/slick/slick.min.js"></script>
-    <script src="js/ready.min.js?ver=1.0.7" charset="utf-8"></script>
+    <script src="js/ready.min.js?ver=1.0.8" charset="utf-8"></script>
 </head>
 <body class="section_middle_center full_min_h">
     <?php
-        // echo md5("1234567890");
+        // echo md5("admin2017");
         if(isset($_SESSION['idusuario']))
             include_once("data/framework.php");
         else
