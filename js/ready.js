@@ -129,8 +129,19 @@ $(document).ready(function() {
     //Hide Column comments
     new $.fn.dataTable.Responsive(tableRecords3);
 
+    //Sucursal
+    var tableRecords4 = $("table.displayrecords4").DataTable({
+        scrollCollapse: true,
+        paging: true,
+        "order": [[0, "desc"]],
+        lengthMenu: [[7, 25, 50, -1], [7, 25, 50, "All"]]
+    });
+
+    //Hide Column comments
+    new $.fn.dataTable.Responsive(tableRecords4);
+
     //Filter origin data
-    $(".origin3").on("change", function() {
-        tableRecords3.column(-2).search(this.value).draw();
+    $(".origin4").on("change", function() {
+        tableRecords4.column(-2).search(this.value).draw();
     }); 
 });

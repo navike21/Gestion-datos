@@ -19,6 +19,8 @@
         <li> <a data-screen="2">Hair Professionals & Salons Register</a> </li>
         <li> <a data-screen="3">Become a Distributor</a> </li>
         <li> <a data-screen="4">Contact Inbox</a> </li>
+        <li> <a data-screen="5">Country Branch</a> </li>
+        <li> <a data-screen="6">City Branch</a> </li>
     </ul>
 </nav>
 <section class="wrapp">
@@ -35,4 +37,7 @@
         <?php include_once($rutaScreen."/become-distributor.php"); ?>
     </div>
     <div class="screens section_middle_center">Not available</div>
+    <div class="screens section_top_center">
+        <?php include_once($rutaScreen."/sucursal.php"); ?>
+    </div>
 </section>

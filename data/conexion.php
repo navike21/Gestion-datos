@@ -1,11 +1,11 @@
 <?php
-    // $bdname = "gestion_datos";
-    // $user   = "root";
-	// $pass   = "";
+    // $bdname = "navikeco_gestion_datos";
+    // $user   = "navikeco_navike";
+    // $pass   = "Server2003";
 	
     $bdname = "navikeco_gestion_datos";
-    $user   = "navikeco_navike";
-    $pass   = "Server2003";
+    $user   = "root";
+    $pass   = "";
 
 	set_exception_handler(function($e) {
 		error_log($e->getMessage());

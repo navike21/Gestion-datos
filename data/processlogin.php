@@ -18,9 +18,9 @@
 		$sql_usuario_row 	= $sql_usuario->fetch(PDO::FETCH_ASSOC);
 		$idusuario = $sql_usuario_row['idusuario']."+".$sql_usuario_row['nombres'];
 		$_SESSION['idusuario'] = $idusuario;
-		echo "success_reload&Bienvenido";
+		echo "success_reload&Welcome";
 	}
 	else{
-		echo "warning&Error de Información";
+		echo "warning&Error data";
 	}
 ?>
