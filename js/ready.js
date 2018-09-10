@@ -85,6 +85,17 @@ $(document).ready(function() {
         $(this).addClass("activeScreen");
     });
 
+    $("#addcountry").on("click", function(event){
+        event.preventDefault();
+        screenswrapp.slick("slickGoTo", 6);
+    });
+
+    $(".back_cancel").on("click", function (event) {
+        event.preventDefault();
+        screenswrapp.slick("slickGoTo", 5);
+        $("#formulario")[0].reset();
+    });
+
 
     //Suscribers
     var tableRecords1 = $("table.displayrecords1").DataTable({

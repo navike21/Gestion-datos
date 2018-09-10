@@ -1,9 +1,9 @@
 <?php
     $sesion = $_SESSION['idusuario'];
-
     $nombreSesion = explode("+", $sesion);
-
     $rutaScreen = "data/screens/";
+
+    include_once("conexion.php");
 ?>
 <header class="w_100 section_middle_justify">
     <h1>Unnique Records</h1>
@@ -20,7 +20,6 @@
         <li> <a data-screen="3">Become a Distributor</a> </li>
         <li> <a data-screen="4">Contact Inbox</a> </li>
         <li> <a data-screen="5">Country Branch</a> </li>
-        <li> <a data-screen="6">City Branch</a> </li>
     </ul>
 </nav>
 <section class="wrapp">
@@ -40,4 +39,8 @@
     <div class="screens section_top_center">
         <?php include_once($rutaScreen."/sucursal.php"); ?>
     </div>
+    <div class="screens section_top_center">
+        <?php include_once($rutaScreen."/addcountry.php"); ?>
+    </div>
 </section>
+<div class="loading section_middle_center"></div>
