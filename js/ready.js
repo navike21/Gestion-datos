@@ -140,6 +140,11 @@ $(document).ready(function() {
     //Hide Column comments
     new $.fn.dataTable.Responsive(tableRecords3);
 
+    //Filter origin data
+    $(".origin3").on("change", function () {
+        tableRecords3.column(-2).search(this.value).draw();
+    });
+
     //Sucursal
     var tableRecords4 = $("table.displayrecords4").DataTable({
         scrollCollapse: true,
@@ -151,8 +156,5 @@ $(document).ready(function() {
     //Hide Column comments
     new $.fn.dataTable.Responsive(tableRecords4);
 
-    //Filter origin data
-    $(".origin4").on("change", function() {
-        tableRecords4.column(-2).search(this.value).draw();
-    }); 
+     
 });

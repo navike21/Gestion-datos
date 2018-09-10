@@ -11,6 +11,11 @@
     <a href="" class="export"><img src="images/excel.svg"></a>
 </div>
 <table id="" class="displayrecords2 stripe hover display nowrap" >
+<?php
+    $consultaSql = 'SELECT idsalon, name, salon_name, phone, country, city, email, comment, use_products, origin, registro FROM sldgje_salon ORDER BY registro ASC';
+    $sql = $PDO->prepare($consultaSql);
+    $sql->execute();
+?>
 <!-- <table id="" class="displayrecords table table-striped table-bordered dt-responsive nowrap" > -->
         <thead>
             <tr>
@@ -18,8 +23,8 @@
                 <th>Name</th>
                 <th>Salon name</th>
                 <th>Phone</th>
-                <th>City</th>
                 <th>Country</th>
+                <th>City</th>
                 <th>Email</th>
                 <th>Use U. products</th>
                 <th>Origin web</th>
@@ -27,7 +32,34 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+        <?php
+            while ($fila = $sql->fetch(PDO::FETCH_NUM, PDO::FETCH_ORI_NEXT)) {
+                // $datos = $fila[0] . "\t" . $fila[1] . "\t" . $fila[2] . "\n";
+                switch ($fila[9]) {
+                    case 'en':
+                        $valFlag = "ENG";
+                        break;
+                    case 'es':
+                        $valFlag = "ESP";
+                        break;
+                }
+                echo '
+                <tr>
+                    <td>'.$fila[10].'</td>
+                    <td>'.$fila[1].'</td>
+                    <td>'.$fila[2].'</td>
+                    <td>'.$fila[3].'</td>
+                    <td>'.$fila[4].'</td>
+                    <td>'.$fila[5].'</td>
+                    <td>'.$fila[6].'</td>
+                    <td class="align_center">'.$fila[8].'</td>
+                    <td class="align_center"><div class="flag '.$fila[9].'">'.$valFlag.'</div></td>
+                    <td>'.$fila[7].'</td>
+                </tr>
+                ';
+            }
+        ?>
+            <!-- <tr>
                 <td class="align_center">28/07/2018</td>
                 <td>Tiger Nixon</td>
                 <td>Nixon's Beauty</td>
@@ -38,20 +70,7 @@
                 <td class="align_center">Yes</td>
                 <td class="align_center"><div class="flag en">ENG</div></td>
                 <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In incidunt quos minima perspiciatis repellat debitis atque excepturi suscipit dolorum error, iure similique deleniti ratione dolor voluptates eos praesentium inventore vel?</td>
-            </tr>
-            <tr>
-                <td class="align_center">28/07/2018</td>
-                <td>Jorge Perez</td>
-                <td>Belleza y estilos</td>
-                <td class="align_center">+51948454587</td>
-                <td class="align_center">Lima</td>
-                <td class="align_center">Peru</td>
-                <td class="align_center">perez@mailto.com</td>
-                <td class="align_center">No</td>
-                <td class="align_center"><div class="flag es">ESP</div></td>
-                <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In incidunt quos minima perspiciatis repellat debitis atque excepturi suscipit dolorum error, iure similique deleniti ratione dolor voluptates eos praesentium inventore vel?</td>
-            </tr>
-            
+            </tr>             -->
         </tbody>
         <tfoot>
             <tr>
@@ -59,8 +78,8 @@
                 <th>Name</th>
                 <th>Salon name</th>
                 <th>Phone</th>
-                <th>City</th>
                 <th>Country</th>
+                <th>City</th>
                 <th>Email</th>
                 <th>Use U. products</th>
                 <th>Origin web</th>

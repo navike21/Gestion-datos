@@ -24,7 +24,7 @@
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 
     <script src="plugins/slick-1.8.0/slick/slick.min.js"></script>
-    <script src="js/ready.min.js?ver=1.1.0" charset="utf-8"></script>
+    <script src="js/ready.min.js?ver=1.1.1" charset="utf-8"></script>
 </head>
 <body class="section_middle_center full_min_h">
     <?php
